@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.translator.web.orm;
+package com.github.bogdanovmn.${projectKey}.web.orm;
 
 class WordNativeQuery {
 	private static final String TO_REMEMBER_WORDS_RARE =

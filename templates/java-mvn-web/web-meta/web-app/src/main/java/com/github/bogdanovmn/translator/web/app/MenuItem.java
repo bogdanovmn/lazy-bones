@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.translator.web.app;
+package com.github.bogdanovmn.${projectKey}.web.app;
 
 public class MenuItem {
 	private final String id;

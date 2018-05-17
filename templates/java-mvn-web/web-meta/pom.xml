@@ -5,18 +5,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.github.bogdanovmn.translator</groupId>
-		<artifactId>translator</artifactId>
+		<groupId>com.github.bogdanovmn.${projectKey}</groupId>
+		<artifactId>${projectKey}</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>translator-web-meta</artifactId>
+	<artifactId>${projectKey}-web-meta</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>translator-web-app</module>
-		<module>translator-web-orm</module>
+		<module>${projectKey}-web-app</module>
+		<module>${projectKey}-web-orm</module>
 	</modules>
 
 
@@ -26,7 +26,7 @@
 				<!-- Import dependency management from Spring Boot -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring-boot.version}</version>
+				<version>\${spring-boot.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

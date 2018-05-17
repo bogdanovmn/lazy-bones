@@ -1,9 +1,9 @@
-package com.github.bogdanovmn.translator.web.app.user;
+package com.github.bogdanovmn.${projectKey}.web.app.user;
 
-import com.github.bogdanovmn.translator.web.app.AbstractMinVisualController;
-import com.github.bogdanovmn.translator.web.app.FormErrors;
-import com.github.bogdanovmn.translator.web.app.config.security.TranslateSecurityService;
-import com.github.bogdanovmn.translator.web.orm.User;
+import com.github.bogdanovmn.${projectKey}.web.app.AbstractMinVisualController;
+import com.github.bogdanovmn.${projectKey}.web.app.FormErrors;
+import com.github.bogdanovmn.${projectKey}.web.app.config.security.TranslateSecurityService;
+import com.github.bogdanovmn.${projectKey}.web.orm.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.translator.web.app.config.mustache;
+package com.github.bogdanovmn.${projectKey}.web.app.config.mustache;
 
 import com.samskivert.mustache.Mustache;
 import org.springframework.boot.autoconfigure.mustache.MustacheEnvironmentCollector;

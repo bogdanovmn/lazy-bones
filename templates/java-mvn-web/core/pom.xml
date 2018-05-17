@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.github.bogdanovmn.translator</groupId>
-        <artifactId>translator</artifactId>
+        <groupId>com.github.bogdanovmn.${projectKey}</groupId>
+        <artifactId>${projectKey}</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>translator-core</artifactId>
+    <artifactId>${projectKey}-core</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>

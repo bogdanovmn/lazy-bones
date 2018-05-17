@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.translator.web.orm;
+package com.github.bogdanovmn.${projectKey}.web.orm;
 
 import org.springframework.util.StringUtils;
 

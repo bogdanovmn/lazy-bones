@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.translator.cli.something;
+package com.github.bogdanovmn.${projectKey}.cli.something;
 
 
 import com.github.bogdanovmn.cmdlineapp.CmdLineAppBuilder;

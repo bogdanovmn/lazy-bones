@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.github.bogdanovmn.translator</groupId>
-        <artifactId>translator-web-meta</artifactId>
+        <groupId>com.github.bogdanovmn.${projectKey}</groupId>
+        <artifactId>${projectKey}-web-meta</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>translator-web-app</artifactId>
+    <artifactId>${projectKey}-web-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
@@ -19,13 +19,13 @@
         <!-- Modules -->
 
         <dependency>
-            <groupId>com.github.bogdanovmn.translator</groupId>
-            <artifactId>translator-web-orm</artifactId>
+            <groupId>com.github.bogdanovmn.${projectKey}</groupId>
+            <artifactId>${projectKey}-web-orm</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.github.bogdanovmn.translator</groupId>
-            <artifactId>translator-core</artifactId>
+            <groupId>com.github.bogdanovmn.${projectKey}</groupId>
+            <artifactId>${projectKey}-core</artifactId>
         </dependency>
 
         <!-- Spring -->
@@ -66,7 +66,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
+                <version>\${spring-boot.version}</version>
                 <executions>
                     <execution>
                         <goals>

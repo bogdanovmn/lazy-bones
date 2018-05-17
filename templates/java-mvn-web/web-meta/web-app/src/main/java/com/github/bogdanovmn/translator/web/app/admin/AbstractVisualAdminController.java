@@ -1,7 +1,7 @@
-package com.github.bogdanovmn.translator.web.app.admin;
+package com.github.bogdanovmn.${projectKey}.web.app.admin;
 
-import com.github.bogdanovmn.translator.web.app.AbstractVisualController;
-import com.github.bogdanovmn.translator.web.app.HeadMenu;
+import com.github.bogdanovmn.${projectKey}.web.app.AbstractVisualController;
+import com.github.bogdanovmn.${projectKey}.web.app.HeadMenu;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

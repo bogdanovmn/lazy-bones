@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.translator.web.orm;
+package com.github.bogdanovmn.${projectKey}.web.orm;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

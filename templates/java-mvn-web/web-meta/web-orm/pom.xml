@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.github.bogdanovmn.translator</groupId>
-        <artifactId>translator-web-meta</artifactId>
+        <groupId>com.github.bogdanovmn.${projectKey}</groupId>
+        <artifactId>${projectKey}-web-meta</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>translator-web-orm</artifactId>
+    <artifactId>${projectKey}-web-orm</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>

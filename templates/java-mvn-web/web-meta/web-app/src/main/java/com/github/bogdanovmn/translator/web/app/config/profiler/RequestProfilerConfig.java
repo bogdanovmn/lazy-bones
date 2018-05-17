@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.translator.web.app.config.profiler;
+package com.github.bogdanovmn.${projectKey}.web.app.config.profiler;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
