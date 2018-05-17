@@ -1,4 +1,4 @@
-import static org.apache.commons.io.FileUtils.moveFileToDirectory
+import static org.apache.commons.io.FileUtils.moveDirectory
 
 Map<String, String> props = [:]
 
@@ -11,8 +11,6 @@ props.projectKey = ask('Выберите projectKey [templateproject]: ', 'templ
 //переносим исходник в нужную директорию
 //moveFileToDirectory(new File(targetDir, 'App.java'), new File(targetDir, "src/main/java/$packageDir"), true)
 //обрабатываем шаблон
-processTemplates 'src/main/java/**/*.java', props
-processTemplates '**/pom.xml', props
 
 Map<String, List<String>> modulesMap = [
         'cli-meta' : ['cli-something'],
@@ -23,7 +21,8 @@ Map<String, List<String>> modulesMap = [
 modulesMap.each {
     baseModuleName, modules ->
         File baseDir = new File(projectDir as File, baseModuleName)
-        baseDir.renameTo(props.projectKey + '-' + baseModuleName)
+        moveDirectory(baseDir, new File(projectDir as File, props.projectKey + '-' + baseModuleName))
+//        baseDir.renameTo(props.projectKey + '-' + baseModuleName)
 
         modules.each {
             moduleName ->
@@ -32,3 +31,6 @@ modulesMap.each {
 
         }
 }
+
+processTemplates '**/*.java', props
+processTemplates '**/pom.xml', props
