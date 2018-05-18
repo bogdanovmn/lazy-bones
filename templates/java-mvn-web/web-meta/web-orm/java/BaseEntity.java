@@ -18,9 +18,6 @@ public abstract class BaseEntity {
 
 	public BaseEntity() {}
 
-	@XmlID
-	@XmlJavaTypeAdapter(ExportToXmlIdAdapter.class)
-	@XmlAttribute(name = "ref")
 	public Integer getId() {
 		return id;
 	}

@@ -22,7 +22,6 @@ public abstract class BaseEntityWithUniqueName extends BaseEntity {
 		super(id);
 	}
 
-	@XmlAttribute
 	public String getName() {
 		return name;
 	}

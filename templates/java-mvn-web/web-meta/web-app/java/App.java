@@ -30,10 +30,5 @@ public class App {
 	public EntityRepositoryMapFactory getEntityMapFactory() {
 		return new EntityRepositoryMapFactory();
 	}
-
-	@Bean
-	public TranslateService getTranslateService() throws TranslateServiceException {
-		return new GoogleTranslate();
-	}
 }
 
