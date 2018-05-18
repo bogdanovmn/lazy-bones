@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.${projectKey}.web.app.config.profiler;
+package ${pkgPrefix}.${projectKey}.web.app.config.profiler;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

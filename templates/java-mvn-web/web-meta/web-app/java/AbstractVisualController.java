@@ -1,6 +1,6 @@
-package com.github.bogdanovmn.${projectKey}.web.app;
+package ${pkgPrefix}.${projectKey}.web.app;
 
-import com.github.bogdanovmn.${projectKey}.web.app.config.mustache.Layout;
+import ${pkgPrefix}.${projectKey}.web.app.config.mustache.Layout;
 import com.samskivert.mustache.Mustache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;

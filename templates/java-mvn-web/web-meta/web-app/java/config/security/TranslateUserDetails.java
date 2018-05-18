@@ -1,7 +1,7 @@
-package com.github.bogdanovmn.${projectKey}.web.app.config.security;
+package ${pkgPrefix}.${projectKey}.web.app.config.security;
 
-import com.github.bogdanovmn.${projectKey}.web.orm.User;
-import com.github.bogdanovmn.${projectKey}.web.orm.UserRole;
+import ${pkgPrefix}.${projectKey}.web.orm.User;
+import ${pkgPrefix}.${projectKey}.web.orm.UserRole;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;

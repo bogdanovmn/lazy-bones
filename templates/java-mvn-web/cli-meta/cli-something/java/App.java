@@ -1,7 +1,7 @@
-package com.github.bogdanovmn.${projectKey}.cli.something;
+package ${pkgPrefix}.${projectKey}.cli.something;
 
 
-import com.github.bogdanovmn.cmdlineapp.CmdLineAppBuilder;
+import ${pkgPrefix}.cmdlineapp.CmdLineAppBuilder;
 
 public class App {
 	public static void main(String[] args) throws Exception {

@@ -2,7 +2,7 @@ import static org.apache.commons.io.FileUtils.moveDirectory
 
 Map<String, String> props = [:]
 
-props.pkgPrefix = ask('Выберите pkgPrefix [com.github.bogdanovmn]: ', 'com.github.bogdanovmn')
+props.pkgPrefix = ask('Выберите pkgPrefix [com.github.bogdanov11mn]: ', '${pkgPrefix}')
 props.projectKey = ask('Выберите projectKey [templateproject]: ', 'templateproject')
 
 

@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.${projectKey}.web.orm;
+package ${pkgPrefix}.${projectKey}.web.orm;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

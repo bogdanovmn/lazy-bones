@@ -1,11 +1,11 @@
-package com.github.bogdanovmn.${projectKey}.web.app.user;
+package ${pkgPrefix}.${projectKey}.web.app.user;
 
-import com.github.bogdanovmn.${projectKey}.web.app.AbstractVisualController;
-import com.github.bogdanovmn.${projectKey}.web.app.FormErrors;
-import com.github.bogdanovmn.${projectKey}.web.app.HeadMenu;
-import com.github.bogdanovmn.${projectKey}.web.app.config.security.Md5PasswordEncoder;
-import com.github.bogdanovmn.${projectKey}.web.orm.User;
-import com.github.bogdanovmn.${projectKey}.web.orm.UserRepository;
+import ${pkgPrefix}.${projectKey}.web.app.AbstractVisualController;
+import ${pkgPrefix}.${projectKey}.web.app.FormErrors;
+import ${pkgPrefix}.${projectKey}.web.app.HeadMenu;
+import ${pkgPrefix}.${projectKey}.web.app.config.security.Md5PasswordEncoder;
+import ${pkgPrefix}.${projectKey}.web.orm.User;
+import ${pkgPrefix}.${projectKey}.web.orm.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;

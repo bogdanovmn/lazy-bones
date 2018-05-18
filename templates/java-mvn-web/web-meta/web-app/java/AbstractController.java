@@ -1,7 +1,7 @@
-package com.github.bogdanovmn.${projectKey}.web.app;
+package ${pkgPrefix}.${projectKey}.web.app;
 
-import com.github.bogdanovmn.${projectKey}.web.app.config.security.TranslateSecurityService;
-import com.github.bogdanovmn.${projectKey}.web.orm.User;
+import ${pkgPrefix}.${projectKey}.web.app.config.security.TranslateSecurityService;
+import ${pkgPrefix}.${projectKey}.web.orm.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 

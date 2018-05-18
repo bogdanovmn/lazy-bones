@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.${projectKey}.web.app.config.security;
+package ${pkgPrefix}.${projectKey}.web.app.config.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

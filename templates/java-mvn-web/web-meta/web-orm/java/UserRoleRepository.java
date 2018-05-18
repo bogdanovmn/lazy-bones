@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.${projectKey}.web.orm;
+package ${pkgPrefix}.${projectKey}.web.orm;
 
 public interface UserRoleRepository extends BaseEntityWithUniqueNameRepository<UserRole> {
 }

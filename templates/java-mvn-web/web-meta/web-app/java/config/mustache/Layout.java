@@ -1,4 +1,4 @@
-package com.github.bogdanovmn.${projectKey}.web.app.config.mustache;
+package ${pkgPrefix}.${projectKey}.web.app.config.mustache;
 
 import com.samskivert.mustache.Mustache;
 import com.samskivert.mustache.Template;

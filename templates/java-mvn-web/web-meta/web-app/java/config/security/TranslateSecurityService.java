@@ -1,7 +1,7 @@
-package com.github.bogdanovmn.${projectKey}.web.app.config.security;
+package ${pkgPrefix}.${projectKey}.web.app.config.security;
 
 
-import com.github.bogdanovmn.${projectKey}.web.orm.User;
+import ${pkgPrefix}.${projectKey}.web.orm.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

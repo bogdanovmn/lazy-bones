@@ -1,7 +1,7 @@
-package com.github.bogdanovmn.${projectKey}.web.app.config.security;
+package ${pkgPrefix}.${projectKey}.web.app.config.security;
 
-import com.github.bogdanovmn.${projectKey}.web.orm.User;
-import com.github.bogdanovmn.${projectKey}.web.orm.UserRepository;
+import ${pkgPrefix}.${projectKey}.web.orm.User;
+import ${pkgPrefix}.${projectKey}.web.orm.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
