@@ -1,17 +1,9 @@
-import static org.apache.commons.io.FileUtils.moveFileToDirectory
-import static org.apache.commons.io.FileUtils.moveDirectory
-
 Map<String, String> props = [:]
 
 props.pkgPrefix = ask('Выберите pkgPrefix [com.github.bogdanovmn]: ', 'com.github.bogdanovmn')
 props.projectKey = ask('Выберите projectKey [templateproject]: ', 'xxx')
 props.pkgBase = props.pkgPrefix + '.' + props.projectKey
 
-//заменяем точки на слэши
-//String packageDir = props.pkg.replaceAll(/\./, '/')
-//переносим исходник в нужную директорию
-//moveFileToDirectory(new File(targetDir, 'App.java'), new File(targetDir, "src/main/java/$packageDir"), true)
-//обрабатываем шаблон
 
 Map<String, List<String>> modulesMap = [
     'cli-meta' : ['cli-something'],
@@ -34,17 +26,14 @@ static String moduleNameToPackage(String moduleName) {
 File renameModule(Map props, String moduleName, String parentModuleName) {
     String targetDirName = (parentModuleName ? prefixedModuleName(props, parentModuleName) + '/' : '') + prefixedModuleName(props, moduleName)
 
-    File srcDir = new File(projectDir, moduleName)
-    File destDir = new File(projectDir, targetDirName)
-
-    println("rename $srcDir to $destDir")
-
-    println srcDir.renameTo(destDir)
-
-    return destDir
+	return renameDir(
+		projectDir as File,
+		moduleName,
+		targetDirName
+	)
 }
 
-def renameDir(File parentDir, String from, String to) {
+File renameDir(File parentDir, String from, String to) {
 	File fromDir = new File(parentDir, from)
 	File toDir = new File(parentDir, to)
 	if (fromDir.exists()) {
@@ -52,29 +41,24 @@ def renameDir(File parentDir, String from, String to) {
 		toDir.mkdirs()
 		println fromDir.renameTo(toDir)
 	}
+
+	return toDir
 }
 
 def copySources(Map<String, String> props, File srcDir, String moduleName) {
-	String destDirName = "src/main/java/${stringToDirName(props.pkgBase)}/${stringToDirName(moduleName)}"
-    File javaDir = new File(srcDir, "java")
-	File destDir = new File(srcDir, destDirName)
-	println "rename java dir $javaDir to $destDir"
-    if (javaDir.exists()) {
-		destDir.mkdirs()
-		println javaDir.renameTo(
-			destDir
-        )
-    }
+	renameDir(
+		srcDir,
+		'java',
+		"src/main/java/${stringToDirName(props.pkgBase)}/${stringToDirName(moduleName)}"
+	)
 }
 
 def copyResources(Map<String, String> props, File srcDir, String moduleName) {
-	File resDir = new File(srcDir, "resources")
-	File destDir = new File(srcDir, "src/main/resources")
-	if (resDir.exists()) {
-		println "rename resource dir $resDir to $destDir"
-		destDir.mkdirs()
-		println resDir.renameTo(destDir)
-	}
+	renameDir(
+		srcDir,
+		'resources',
+		"src/main/resources"
+	)
 }
 
 modulesMap.each {
