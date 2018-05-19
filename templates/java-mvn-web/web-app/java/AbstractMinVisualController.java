@@ -1,6 +1,6 @@
-package ${pkgPrefix}.${projectKey}.web.app;
+package ${pkgProjectPrefix}.web.app;
 
-import ${pkgPrefix}.${projectKey}.web.app.config.mustache.Layout;
+import ${pkgProjectPrefix}.web.app.config.mustache.Layout;
 import com.samskivert.mustache.Mustache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;

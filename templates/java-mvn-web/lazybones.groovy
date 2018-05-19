@@ -1,8 +1,8 @@
 Map<String, String> props = [:]
 
-props.pkgPrefix = ask('Выберите pkgPrefix [com.github.bogdanovmn]: ', 'com.github.bogdanovmn')
 props.projectKey = ask('Выберите projectKey [templateproject]: ', 'xxx')
-props.pkgBase = props.pkgPrefix + '.' + props.projectKey
+props.pkgPrefix = 'com.github.bogdanovmn'
+props.pkgProjectPrefix = props.pkgPrefix + '.' + props.projectKey
 
 
 Map<String, List<String>> modulesMap = [
@@ -49,7 +49,7 @@ def copySources(Map<String, String> props, File srcDir, String moduleName) {
 	renameDir(
 		srcDir,
 		'java',
-		"src/main/java/${stringToDirName(props.pkgBase)}/${stringToDirName(moduleName)}"
+		"src/main/java/${stringToDirName(props.pkgProjectPrefix)}/${stringToDirName(moduleName)}"
 	)
 }
 
@@ -82,5 +82,5 @@ modulesMap.each {
 		}
 }
 
-//processTemplates '**/*.java', props
-//processTemplates '**/pom.xml', props
+processTemplates '**/*.java', props
+processTemplates '**/pom.xml', props

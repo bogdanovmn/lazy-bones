@@ -1,9 +1,9 @@
-package ${pkgPrefix}.${projectKey}.web.app.user;
+package ${pkgProjectPrefix}.web.app.user;
 
-import ${pkgPrefix}.${projectKey}.web.app.AbstractMinVisualController;
-import ${pkgPrefix}.${projectKey}.web.app.FormErrors;
-import ${pkgPrefix}.${projectKey}.web.app.config.security.TranslateSecurityService;
-import ${pkgPrefix}.${projectKey}.web.orm.User;
+import ${pkgProjectPrefix}.web.app.AbstractMinVisualController;
+import ${pkgProjectPrefix}.web.app.FormErrors;
+import ${pkgProjectPrefix}.web.app.config.security.ProjectSecurityService;
+import ${pkgProjectPrefix}.web.orm.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,10 +19,10 @@ import javax.validation.Valid;
 @RequestMapping("/registration")
 class RegistrationController extends AbstractMinVisualController {
 	private final RegistrationService registrationService;
-	private final TranslateSecurityService securityService;
+	private final ProjectSecurityService securityService;
 
 	@Autowired
-	public RegistrationController(RegistrationService registrationService, TranslateSecurityService securityService) {
+	public RegistrationController(RegistrationService registrationService, ProjectSecurityService securityService) {
 		this.registrationService = registrationService;
 		this.securityService = securityService;
 	}
@@ -64,6 +64,6 @@ class RegistrationController extends AbstractMinVisualController {
 			user.getPasswordHash()
 		);
 
-		return new ModelAndView("redirect:/to-remember");
+		return new ModelAndView("redirect:/index");
 	}
 }

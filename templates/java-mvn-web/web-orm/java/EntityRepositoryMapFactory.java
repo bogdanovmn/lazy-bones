@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.orm;
+package ${pkgProjectPrefix}.web.orm;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -9,11 +9,7 @@ public class EntityRepositoryMapFactory {
 	private Map<Class<? extends BaseEntityWithUniqueName>, BaseEntityWithUniqueNameRepository> map;
 
 	@Autowired
-	private WordRepository wordRepository;
-	@Autowired
 	private UserRoleRepository userRoleRepository;
-	@Autowired
-	private TranslateProviderRepository translateProviderRepository;
 
 	public EntityRepositoryMapFactory() {
 	}
@@ -22,8 +18,6 @@ public class EntityRepositoryMapFactory {
 		this.map = new HashMap<Class<? extends BaseEntityWithUniqueName>, BaseEntityWithUniqueNameRepository>()
 		{{
 			put(UserRole.class,          userRoleRepository);
-			put(Word.class,              wordRepository);
-			put(TranslateProvider.class, translateProviderRepository);
 		}};
 	}
 

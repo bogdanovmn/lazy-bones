@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.app.user;
+package ${pkgProjectPrefix}.web.app.user;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;

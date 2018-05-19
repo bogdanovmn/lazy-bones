@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.app.config.profiler;
+package ${pkgProjectPrefix}.web.app.config.profiler;
 
 import org.hibernate.EmptyInterceptor;
 import org.slf4j.Logger;

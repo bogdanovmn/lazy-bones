@@ -1,7 +1,7 @@
-package ${pkgPrefix}.${projectKey}.web.app.config.security;
+package ${pkgProjectPrefix}.web.app.config.security;
 
 
-import ${pkgPrefix}.${projectKey}.web.orm.User;
+import ${pkgProjectPrefix}.web.orm.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,14 +13,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TranslateSecurityService {
-	private static final Logger LOG = LoggerFactory.getLogger(TranslateSecurityService.class);
+public class ProjectSecurityService {
+	private static final Logger LOG = LoggerFactory.getLogger(ProjectSecurityService.class);
 
 	private final AuthenticationManager authenticationManager;
 	private final UserDetailsService userDetailsService;
 
 	@Autowired
-	public TranslateSecurityService(AuthenticationManager authenticationManager, UserDetailsService userDetailsService) {
+	public ProjectSecurityService(AuthenticationManager authenticationManager, UserDetailsService userDetailsService) {
 		this.authenticationManager = authenticationManager;
 		this.userDetailsService = userDetailsService;
 	}
@@ -31,8 +31,8 @@ public class TranslateSecurityService {
 
 	public User getLoggedInUser() {
 		Object userDetails = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		if (userDetails instanceof TranslateUserDetails) {
-			return ((TranslateUserDetails)userDetails).getUser();
+		if (userDetails instanceof ProjectUserDetails) {
+			return ((ProjectUserDetails)userDetails).getUser();
 		}
 
 		return null;

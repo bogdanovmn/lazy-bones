@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.app;
+package ${pkgProjectPrefix}.web.app;
 
 public class MenuItem {
 	private final String id;

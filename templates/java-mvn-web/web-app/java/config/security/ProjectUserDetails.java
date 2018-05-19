@@ -1,7 +1,7 @@
-package ${pkgPrefix}.${projectKey}.web.app.config.security;
+package ${pkgProjectPrefix}.web.app.config.security;
 
-import ${pkgPrefix}.${projectKey}.web.orm.User;
-import ${pkgPrefix}.${projectKey}.web.orm.UserRole;
+import ${pkgProjectPrefix}.web.orm.User;
+import ${pkgProjectPrefix}.web.orm.UserRole;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,10 +10,10 @@ import org.springframework.util.StringUtils;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-public class TranslateUserDetails implements UserDetails {
+public class ProjectUserDetails implements UserDetails {
 	private final User user;
 
-	public TranslateUserDetails(User user) {
+	public ProjectUserDetails(User user) {
 		super();
 		this.user = user;
 	}

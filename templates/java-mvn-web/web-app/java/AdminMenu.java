@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.app;
+package ${pkgProjectPrefix}.web.app;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package ${pkgPrefix}.${projectKey}.web.app.admin;
+package ${pkgProjectPrefix}.web.app.admin;
 
-import ${pkgPrefix}.${projectKey}.web.app.AbstractController;
+import ${pkgProjectPrefix}.web.app.AbstractController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

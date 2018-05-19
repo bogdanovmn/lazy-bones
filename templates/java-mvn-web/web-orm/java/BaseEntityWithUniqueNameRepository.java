@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.orm;
+package ${pkgProjectPrefix}.web.orm;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

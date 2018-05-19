@@ -1,6 +1,6 @@
-package ${pkgPrefix}.${projectKey}.web.app.user;
+package ${pkgProjectPrefix}.web.app.user;
 
-import ${pkgPrefix}.${projectKey}.web.app.AbstractMinVisualController;
+import ${pkgProjectPrefix}.web.app.AbstractMinVisualController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +11,7 @@ class LoginController extends AbstractMinVisualController {
 	@GetMapping("/login")
 	ModelAndView form(Model model, String error) {
 		if (getUser() != null) {
-			return new ModelAndView("redirect:/to-remember/all");
+			return new ModelAndView("redirect:/index");
 		}
 
 		if (error != null) {

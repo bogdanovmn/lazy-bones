@@ -1,13 +1,13 @@
-package ${pkgPrefix}.${projectKey}.web.app;
+package ${pkgProjectPrefix}.web.app;
 
-import ${pkgPrefix}.${projectKey}.web.app.config.security.TranslateSecurityService;
-import ${pkgPrefix}.${projectKey}.web.orm.User;
+import ${pkgProjectPrefix}.web.app.config.security.ProjectSecurityService;
+import ${pkgProjectPrefix}.web.orm.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 public abstract class AbstractController {
 	@Autowired
-	private TranslateSecurityService securityService;
+	private ProjectSecurityService securityService;
 
 	public User getUser() {
 		return securityService.getLoggedInUser();

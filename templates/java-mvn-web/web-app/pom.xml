@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>${pkgPrefix}.${projectKey}</groupId>
+        <groupId>${pkgProjectPrefix}</groupId>
         <artifactId>${projectKey}-web-meta</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -19,12 +19,12 @@
         <!-- Modules -->
 
         <dependency>
-            <groupId>${pkgPrefix}.${projectKey}</groupId>
+            <groupId>${pkgProjectPrefix}</groupId>
             <artifactId>${projectKey}-web-orm</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>${pkgPrefix}.${projectKey}</groupId>
+            <groupId>${pkgProjectPrefix}</groupId>
             <artifactId>${projectKey}-core</artifactId>
         </dependency>
 

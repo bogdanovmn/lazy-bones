@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.app.config.security;
+package ${pkgProjectPrefix}.web.app.config.security;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.util.DigestUtils;

@@ -1,7 +1,7 @@
-package ${pkgPrefix}.${projectKey}.web.app.config.security;
+package ${pkgProjectPrefix}.web.app.config.security;
 
-import ${pkgPrefix}.${projectKey}.web.orm.User;
-import ${pkgPrefix}.${projectKey}.web.orm.UserRepository;
+import ${pkgProjectPrefix}.web.orm.User;
+import ${pkgProjectPrefix}.web.orm.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -9,11 +9,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TranslateUserDetailsService implements UserDetailsService {
+public class ProjectUserDetailsService implements UserDetailsService {
 	private final UserRepository userRepository;
 
 	@Autowired
-	public TranslateUserDetailsService(UserRepository userRepository) {
+	public ProjectUserDetailsService(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
 
@@ -30,6 +30,6 @@ public class TranslateUserDetailsService implements UserDetailsService {
 			);
 		}
 
-		return new TranslateUserDetails(user);
+		return new ProjectUserDetails(user);
 	}
 }

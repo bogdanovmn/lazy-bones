@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.orm;
+package ${pkgProjectPrefix}.web.orm;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -22,12 +22,6 @@ public class User extends BaseEntityWithUniqueName {
 		inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")
 	)
 	private Set<UserRole> roles;
-
-	@OneToMany(mappedBy = "user")
-	private Set<UserHoldOverWord> holdOverWords;
-
-	@OneToMany(mappedBy = "user", cascade = CascadeType.MERGE)
-	private Set<UserRememberedWord> rememberedWords;
 
 	public User() {}
 
@@ -68,24 +62,6 @@ public class User extends BaseEntityWithUniqueName {
 
 	public User setRoles(Set<UserRole> roles) {
 		this.roles = roles;
-		return this;
-	}
-
-	public Set<UserHoldOverWord> getHoldOverWords() {
-		return holdOverWords;
-	}
-
-	public User setHoldOverWords(Set<UserHoldOverWord> holdOverWords) {
-		this.holdOverWords = holdOverWords;
-		return this;
-	}
-
-	public Set<UserRememberedWord> getRememberedWords() {
-		return rememberedWords;
-	}
-
-	public User setRememberedWords(Set<UserRememberedWord> rememberedWords) {
-		this.rememberedWords = rememberedWords;
 		return this;
 	}
 }

@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.app.config.mustache;
+package ${pkgProjectPrefix}.web.app.config.mustache;
 
 import com.samskivert.mustache.Mustache;
 import org.springframework.boot.autoconfigure.mustache.MustacheEnvironmentCollector;

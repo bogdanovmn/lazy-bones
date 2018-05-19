@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.app;
+package ${pkgProjectPrefix}.web.app;
 
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;

@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.orm;
+package ${pkgProjectPrefix}.web.orm;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;

@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.cli.something;
+package ${pkgProjectPrefix}.cli.something;
 
 
 import ${pkgPrefix}.cmdlineapp.CmdLineAppBuilder;

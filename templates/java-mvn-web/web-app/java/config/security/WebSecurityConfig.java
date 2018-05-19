@@ -1,4 +1,4 @@
-package ${pkgPrefix}.${projectKey}.web.app.config.security;
+package ${pkgProjectPrefix}.web.app.config.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -11,10 +11,10 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-	private final TranslateUserDetailsService userDetailsService;
+	private final ProjectUserDetailsService userDetailsService;
 
 	@Autowired
-	public WebSecurityConfig(TranslateUserDetailsService userDetailsService) {
+	public WebSecurityConfig(ProjectUserDetailsService userDetailsService) {
 		this.userDetailsService = userDetailsService;
 	}
 

@@ -1,11 +1,12 @@
-package ${pkgPrefix}.${projectKey}.web.app;
+package ${pkgProjectPrefix}.web.app;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HeadMenu {
 	public enum ITEM {
-		ITEM_NAME
+		SETTINGS,
+		ADMIN
 	}
 
 	private final String current;
@@ -38,7 +39,7 @@ public class HeadMenu {
 	private void prepare() {
 		if (!this.isPrepared) {
 			items = new ArrayList<>();
-			items.add(new MenuItem(ITEM.ITEM_NAME.name(), "/item-page", "Page title"));
+			items.add(new MenuItem(ITEM.SETTINGS.name(), "/user/settings", "user settings"));
 			if (this.isAdmin) {
 //				items.add(new MenuItem(ITEM.ADMIN.name(), "/admin/something", "Админка"));
 			}
