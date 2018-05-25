@@ -19,10 +19,6 @@ static String stringToDirName(String packageName) {
 	return packageName.replaceAll(/[.-]/, '/')
 }
 
-static String moduleNameToPackage(String moduleName) {
-	return moduleName.replaceAll(/-/, '.')
-}
-
 File renameModule(Map props, String moduleName, String parentModuleName) {
     String targetDirName = (parentModuleName ? prefixedModuleName(props, parentModuleName) + '/' : '') + prefixedModuleName(props, moduleName)
 
@@ -53,7 +49,7 @@ def copySources(Map<String, String> props, File srcDir, String moduleName) {
 	)
 }
 
-def copyResources(Map<String, String> props, File srcDir, String moduleName) {
+def copyResources(File srcDir) {
 	renameDir(
 		srcDir,
 		'resources',
@@ -71,16 +67,18 @@ modulesMap.each {
                     println("copy module $parentModuleName/$moduleName")
                     File dir = renameModule(props, moduleName, parentModuleName)
 					copySources(props, dir, moduleName)
-					copyResources(props, dir, moduleName)
-            }
+					copyResources(dir)
+			}
         }
         else {
             println("copy module $parentModuleName")
             File dir = renameModule(props, parentModuleName, null)
 			copySources(props, dir, parentModuleName)
-			copyResources(props, dir, parentModuleName)
+			copyResources(dir)
 		}
 }
 
 processTemplates '**/*.java', props
 processTemplates '**/pom.xml', props
+processTemplates '**/*.properties', props
+processTemplates '**/*.html', props
