@@ -12,13 +12,18 @@ public abstract class AbstractVisualController extends AbstractController {
 	@Autowired
 	private Mustache.Compiler compiler;
 
+	@Value("${server.context-path:}")
+	private String contextPath;
+
 	@ModelAttribute("layout")
 	public Mustache.Lambda layout(Map<String, Object> model) {
-		return new Layout(compiler, "main");
+		return new Layout(compiler, "main", contextPath);
 	}
 
 	@ModelAttribute
 	public void addCommonAttributes(Model model) {
+		model.addAttribute("menu", new HeadMenu(currentMenuItem(), isAdmin()).getItems());
+		model.addAttribute("adminMenu", new AdminMenu(currentAdminMenuItem()).getItems());
 		model.addAttribute("userName", getUser().getName());
 	}
 

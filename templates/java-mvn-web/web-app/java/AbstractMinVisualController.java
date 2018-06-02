@@ -10,9 +10,11 @@ import java.util.Map;
 public abstract class AbstractMinVisualController extends AbstractController {
 	@Autowired
 	private Mustache.Compiler compiler;
+	@Value("${server.context-path:}")
+	private String contextPath;
 
 	@ModelAttribute("layout")
 	public Mustache.Lambda layout(Map<String, Object> model) {
-		return new Layout(compiler, "min");
+		return new Layout(compiler, "min", contextPath);
 	}
 }
