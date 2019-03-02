@@ -1,11 +1,11 @@
 package ${pkgProjectPrefix}.web.app.user;
 
-import ${pkgProjectPrefix}.web.app.AbstractVisualController;
-import ${pkgProjectPrefix}.web.app.FormErrors;
-import ${pkgProjectPrefix}.web.app.HeadMenu;
-import ${pkgProjectPrefix}.web.app.config.security.Md5PasswordEncoder;
-import ${pkgProjectPrefix}.web.orm.User;
-import ${pkgProjectPrefix}.web.orm.UserRepository;
+import ${pkgProjectPrefix}.web.app.infrastructure.AbstractVisualController;
+import ${pkgProjectPrefix}.web.app.infrastructure.FormErrors;
+import ${pkgProjectPrefix}.web.app.infrastructure.HeadMenu;
+import ${pkgProjectPrefix}.web.app.infrastructure.config.security.Md5PasswordEncoder;
+import ${pkgProjectPrefix}.web.orm.entity.User;
+import ${pkgProjectPrefix}.web.orm.entity.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;

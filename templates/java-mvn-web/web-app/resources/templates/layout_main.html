@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="{{layout.contextPath}}/css/main.css" type="text/css">
     <link rel="icon" type="image/png" href="{{layout.contextPath}}/img/icon.png" />
 
-    <script language="javascript" type="text/javascript" src="{{layout.contextPath}}/js/jquery-3.2.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="{{layout.contextPath}}/webjars/jquery/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="{{layout.contextPath}}/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{layout.contextPath}}/webjars/bootstrap/css/bootstrap.min.css" type="text/css">
 </head>
 
 <body>
-<div class=main>
+<div class=container-fluid>
+
     <!-- Navigation -->
     {{> inc/top_menu }}
-    <div id=mid_area>
-        <!-- Content -->
-        <div id=data_area>
-            {{{layout.body}}}
-        </div>
+
+    <!-- Content -->
+    <div class="container">
+        {{{layout.body}}}
     </div>
 </div>
 </body>

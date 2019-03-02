@@ -1,6 +1,6 @@
 package ${pkgProjectPrefix}.web.app.user;
 
-import ${pkgProjectPrefix}.web.app.AbstractMinVisualController;
+import ${pkgProjectPrefix}.web.app.infrastructure.AbstractMinVisualController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

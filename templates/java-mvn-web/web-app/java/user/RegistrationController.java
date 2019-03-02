@@ -1,9 +1,9 @@
 package ${pkgProjectPrefix}.web.app.user;
 
-import ${pkgProjectPrefix}.web.app.AbstractMinVisualController;
-import ${pkgProjectPrefix}.web.app.FormErrors;
-import ${pkgProjectPrefix}.web.app.config.security.ProjectSecurityService;
-import ${pkgProjectPrefix}.web.orm.User;
+import ${pkgProjectPrefix}.web.app.infrastructure.AbstractMinVisualController;
+import ${pkgProjectPrefix}.web.app.infrastructure.FormErrors;
+import ${pkgProjectPrefix}.web.app.infrastructure.config.security.ProjectSecurityService;
+import ${pkgProjectPrefix}.web.orm.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

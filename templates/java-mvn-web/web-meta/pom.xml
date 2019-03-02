@@ -19,6 +19,12 @@
 		<module>${projectKey}-web-orm</module>
 	</modules>
 
+	<dependencies>
+		<dependency>
+			<groupId>com.github.bogdanovmn.common</groupId>
+			<artifactId>common-spring</artifactId>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>

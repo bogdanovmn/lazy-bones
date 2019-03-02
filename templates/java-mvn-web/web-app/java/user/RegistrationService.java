@@ -1,9 +1,9 @@
 package ${pkgProjectPrefix}.web.app.user;
 
-import ${pkgProjectPrefix}.web.orm.EntityFactory;
-import ${pkgProjectPrefix}.web.orm.User;
-import ${pkgProjectPrefix}.web.orm.UserRepository;
-import ${pkgProjectPrefix}.web.orm.UserRole;
+import com.github.bogdanovmn.common.spring.jpa.EntityFactory;
+import ${pkgProjectPrefix}.web.orm.entity.User;
+import ${pkgProjectPrefix}.web.orm.entity.UserRepository;
+import ${pkgProjectPrefix}.web.orm.entity.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
