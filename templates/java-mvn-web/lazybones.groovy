@@ -8,7 +8,8 @@ props.pkgProjectPrefix = props.pkgPrefix + '.' + props.projectKey
 Map<String, List<String>> modulesMap = [
     'cli-meta' : ['cli-something'],
     'core' : [],
-    'web-meta' : [ 'web-app', 'web-orm' ]
+    'web' : [],
+    'model' : []
 ]
 
 static String prefixedModuleName(Map props, String name) {
@@ -81,4 +82,5 @@ modulesMap.each {
 processTemplates '**/*.java', props
 processTemplates '**/pom.xml', props
 processTemplates '**/*.properties', props
+processTemplates '**/*.yml', props
 processTemplates '**/*.html', props

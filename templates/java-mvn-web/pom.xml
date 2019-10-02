@@ -12,18 +12,27 @@
 	<modules>
 		<module>${projectKey}-core</module>
 		<module>${projectKey}-cli-meta</module>
-		<module>${projectKey}-web-meta</module>
+		<module>${projectKey}-model</module>
+		<module>${projectKey}-web</module>
 	</modules>
 
 	<properties>
 		<encoding>UTF-8</encoding>
 		<java.version>1.8</java.version>
-		<spring-boot.version>2.1.3.RELEASE</spring-boot.version>
-		<common.version>1.0.5</common.version>
+		<spring-boot.version>2.1.8.RELEASE</spring-boot.version>
+		<common.version>1.4.0</common.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>\${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 
 			<!-- Modules -->
 
@@ -34,7 +43,7 @@
 			</dependency>
 			<dependency>
 				<groupId>${pkgProjectPrefix}</groupId>
-				<artifactId>${projectKey}-web-orm</artifactId>
+				<artifactId>${projectKey}-model</artifactId>
 				<version>1.0-SNAPSHOT</version>
 			</dependency>
 
