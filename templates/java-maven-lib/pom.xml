@@ -7,6 +7,11 @@
 	<groupId>${pkgProjectPrefix}</groupId>
 	<artifactId>${projectKey}</artifactId>
 	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name></name>
+	<description></description>
+	<url>http://github.com/bogdanovmn/${githubName}</url>
 
 	<properties>
 		<encoding>UTF-8</encoding>
