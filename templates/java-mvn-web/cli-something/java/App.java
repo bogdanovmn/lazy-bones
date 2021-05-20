@@ -1,7 +1,7 @@
 package ${pkgProjectPrefix}.cli.something;
 
 
-import ${pkgPrefix}.cmdlineapp.CmdLineAppBuilder;
+import ${pkgPrefix}.cmdline.CmdLineAppBuilder;
 
 public class App {
 	public static void main(String[] args) throws Exception {

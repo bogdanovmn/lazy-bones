@@ -5,6 +5,7 @@ import ${pkgProjectPrefix}.web.infrastructure.FormErrors;
 import ${pkgProjectPrefix}.web.infrastructure.config.security.Md5PasswordEncoder;
 import ${pkgProjectPrefix}.model.entity.User;
 import ${pkgProjectPrefix}.model.entity.UserRepository;
+import ${pkgProjectPrefix}.web.infrastructure.MainMenuItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
@@ -14,7 +15,6 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import com.github.bogdanovmn.common.spring.menu.MenuItem;
-import com.github.bogdanovmn.gowanalyze.web.infrastructure.MainMenuItem;
 
 
 
